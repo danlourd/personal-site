@@ -106,7 +106,7 @@ $(document).ready(function () {
   });
 
   //animatedModal
-  $("#demo01,#demo02,#demo03,#demo04,#demo05,#demo06").animatedModal();
+  $("#demo01,#demo02,#demo03,#demo04,#demo05,#demo06,#demo07").animatedModal();
 
   function hideContent(contentName) {
     if (contentName === "demo01") {
@@ -139,9 +139,14 @@ $(document).ready(function () {
     } else {
       $("#demo06_content").addClass('collapse')
     }
+    if (contentName === "demo07") {
+      $("#demo07_content").removeClass('collapse');
+    } else {
+      $("#demo07_content").addClass('collapse');
+    }
   }
 
-  $("#demo01,#demo02,#demo03,#demo04,#demo05,#demo06").on('click', function (e) {
+  $("#demo01,#demo02,#demo03,#demo04,#demo05,#demo06,#demo07").on('click', function (e) {
     hideContent(e.currentTarget.id);
   });
 
